@@ -412,7 +412,7 @@ module GitHosting
 					users.map{|u| u.gitolite_public_keys.active}.flatten.compact.uniq.each do |key|
 						filename = File.join(local_dir, 'gitolite-admin/keydir',"#{key.identifier}.pub")
 						unless File.exists? filename
-							File.open(filename, 'w') {|f| f.write(key.key.gsub(/\n/,'')) }
+							File.open(filename, 'w') {|f| f.write(key.key.gsub(/\r\n/,"")) }
 							changed = true
 						end
 					end

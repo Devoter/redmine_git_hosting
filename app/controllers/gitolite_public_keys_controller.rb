@@ -12,6 +12,7 @@ class GitolitePublicKeysController < ApplicationController
 	def delete
 		@gitolite_public_key[:active] = 0
 		@gitolite_public_key.save
+		@gitolite_public_key.destroy
 		redirect_to url_for(:controller => 'my', :action => 'account')
 	end
 
