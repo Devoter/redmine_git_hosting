@@ -90,7 +90,7 @@ owner of these files to www-data and the permissions to 600 for the private key 
 root directory:
 
     cd vendor/plugins
-    git clone https://github.com/ericpaulbishop/redmine_git_hosting.git
+    git clone https://Devoter@github.com/Devoter/redmine_git_hosting.git
     rm -rf redmine_git_hosting/.git
     cd ../..
 
